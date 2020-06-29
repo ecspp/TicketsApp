@@ -1,0 +1,18 @@
+@import '../../../../light.scss';
+@import '../../../../variables.scss';
+
+.logo-top {
+  display: block;
+  position: relative;
+  top: -12px;
+  margin-bottom: -45px;
+}
+
+.logo-top + .left-menu {
+  display: none;
+}
+
+.navbar.fixed-top {
+  background-color: $background;
+  height: $navbar-height;
+}

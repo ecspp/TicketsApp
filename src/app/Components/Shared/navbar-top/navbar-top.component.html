@@ -1,0 +1,22 @@
+<nav class="navbar fixed-top navbar-light justify-content-between" [ngStyle]="styles">
+  <a class="navbar-brand" *ngIf="logo == 'show'">
+    <app-logo-changeable class="logo-top" height="80px" type="full"></app-logo-changeable>
+  </a>
+  <div class="ml-auto">
+    <a href="#" [routerLink]="['/preferences']" routerLinkActive="router-link-active"  class="navbar-text">
+      <span class="d-sm-none d-md-inline">Preferences</span>
+    </a>
+    <button mat-icon-button class="d-none d-sm-inline d-md-none nav-icon" [routerLink]="['/preferences']">
+      <fa-icon [icon]="faCog"></fa-icon>
+    </button>
+
+    <span class="d-sm-none d-md-inline">  |  </span>
+
+    <a href="#" (click)="onLogout()" routerLinkActive="router-link-active"  class="navbar-text link">
+      <span class="d-sm-none d-md-inline">Logout</span>
+    </a>
+    <button mat-icon-button class="d-none d-sm-inline d-md-none nav-icon" (click)="onLogout()">
+      <fa-icon [icon]="faSignOutAlt"></fa-icon>
+    </button>
+  </div>
+</nav>

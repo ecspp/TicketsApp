@@ -1,0 +1,9 @@
+<div class=" content">
+  <div>
+    <button (click)="getContacts()">GetallContacts</button>
+    <h1>Contacts:</h1>
+    <ul *ngFor="let contact of contacts$ | async">
+      <li>Contact: {{ contact.name }}</li>
+    </ul>
+  </div>
+</div>
